@@ -7,6 +7,8 @@ Two lightweight scripts to collect YouTube videos about AI content creation and 
 - `fetch_core_transcripts.py`: Reads your curated CSV (with `Core_video` flag), fetches transcripts for `Core_video=1` videos, and writes `youtube_core_transcripts.csv`.
 - `youtube_candidates_basic.csv`: Sample output from the sampler (kept here as reference).
 - `youtube_core_transcripts.csv`: Sample output after fetching transcripts (kept here as reference).
+  - Columns include `transcript` for the videos you marked as `Core_video=1`.
+- `youtube_candidates_basic.csv`: Output of the sampler with search results + stats + month bucket (for manual screening).
 
 ## Requirements
 - Python 3.8+
