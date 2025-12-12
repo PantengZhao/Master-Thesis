@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.numbers
+youtube_candidates_basic.csv
+youtube_core_transcripts.csv
