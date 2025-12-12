@@ -12,6 +12,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from typing import Dict, List
+import os
 
 import pandas as pd
 from googleapiclient.discovery import build
@@ -21,8 +22,8 @@ from tqdm import tqdm
 # Configuration
 # --------------------------------------------------------------------------- #
 
-# Replace with your key if needed
-API_KEY = "AIzaSyCnR1WTqcxp-irDIXcD53KvcrstX4EOk10"
+# Replace with your key if needed. Recommended: set env var YOUTUBE_API_KEY.
+API_KEY = os.getenv("YOUTUBE_API_KEY", "YOUR_API_KEY_HERE")
 
 # Single-layer queries
 QUERIES = [

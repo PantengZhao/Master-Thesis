@@ -11,6 +11,7 @@ Two lightweight scripts to collect YouTube videos about AI content creation and 
 ## Requirements
 - Python 3.8+
 - Packages: `google-api-python-client`, `pandas`, `tqdm`, `youtube-transcript-api`
+- YouTube API key: set env `YOUTUBE_API_KEY` (or edit the script to inject your key)
 
 Install deps (in your virtualenv):
 ```bash
@@ -23,8 +24,9 @@ The sampler searches 2025-08-01 to 2025-11-22 with three queries:
 - `AI tools for content creators`
 - `AI workflow for content creation`
 
-Run:
+Run (ensure `YOUTUBE_API_KEY` is set):
 ```bash
+export YOUTUBE_API_KEY=YOUR_API_KEY
 python youtube_aigc_sampler.py
 ```
 Output: `youtube_candidates_basic.csv` with video id, channel, title/description, stats, and `month_bucket`.
@@ -46,4 +48,3 @@ Behavior:
 - API key: update `API_KEY` in `youtube_aigc_sampler.py` to your own.
 - Search quota: each `search().list` costs 100 quota units; the sampler uses ~300 units per run.
 - Transcript access can be blocked by YouTube (IP/region/rate limits). If you see “IP blocked” errors, retry later or from a different network.
-
